@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <meta name="title" content="Weather" />
+    <meta name="description" content="Weather app made by Jashandeep" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css"
+    />
+
+    <script src="./js/api.js" type="module"></script>
+    <script src="./js/module.js" type="module"></script>
+    <script src="./js/route.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/Newsapi.js" type="module"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="./images/logo.png" width="364" height="58" alt="logo" />
+        </a>
+        <div class="search-container">
+          <div class="search-view" data-search-view>
+            <div class="search-wapper">
+              <input
+                type="search"
+                name="search"
+                placeholder="Search"
+                autocomplete="off"
+                class="search-field"
+                data-search-field
+              />
+              <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+
+              <button
+                class="search-wapper2 arrow-btn has-state"
+                aria-label="close search"
+                data-search-toggler
+              >
+                <i id="arrow-icon" class="fa-sharp fa-solid fa-arrow-left"></i>
+              </button>
+            </div>
+
+            <div class="search-result" data-search-result></div>
+          </div>
+        </div>
+
+        <div class="header-action">
+          <button
+            class="icon-btn has state"
+            aria-label="open search"
+            data-search-toggler
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <a
+            href="#/current-location"
+            class="btn-primary has-state"
+            data-current-location-btn
+          >
+            <i class="fa-solid fa-location-arrow"></i>
+            <span class="span">Current Location</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article class="container" data-container>
+        <div class="content-left">
+          <section
+            class="section current-weather"
+            aria-label="current-weather"
+            data-current-weather
+          ></section>
+
+          <!--
+        #FORECAST
+      -->
+          <section
+            class="section forecast"
+            aria-labelledby="forecast-label"
+            data-5-day-forecast
+          ></section>
+        </div>
+
+        <div class="content-right">
+          <!-- #HIGHLIGHTS-->
+          <section
+            class="section highlights"
+            aria-labelledby="highlights-label"
+            data-highlights
+          ></section>
+
+          <!-- #HOURLY FORECAST-->
+
+          <div
+            class="section hourly-forecast"
+            aria-label="hourly-forecast"
+            data-hourly-forecast
+          ></div>
+
+          <!--
+  #Foother
+-->
+          <footer class="footer">
+            <div class="body-3">
+              <p>Copyright 2023 Jashan. All Rights Reserved.</p>
+              <p>
+                Powered By
+                <span class="powered-by"
+                  ><a
+                    href="https://openweathermap.org/api"
+                    title="OpenWeatherMap API"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      src="./images/openweather.png"
+                      width="150"
+                      height="30"
+                      loading="lazy"
+                      alt="OpenWeather"
+                    /> </a
+                ></span>
+              </p>
+            </div>
+          </footer>
+        </div>
+      </article>
+    </main>
+
+    <!--  Loading
+-->
+    <div class="loading" data-loading></div>
+
+    <!--
+
+  #404 Section
+-->
+
+    <section class="error-content" data-error-content>
+      <h2 class="heading">404</h2>
+      <p class="body-1">Page not Found</p>
+      <a href="#" class="btn-primary">
+        <span class="span">Go Home</span>
+      </a>
+    </section>
+  </body>
+</html>
