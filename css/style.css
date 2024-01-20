@@ -252,7 +252,7 @@ body {
   max-width: max-content;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 0px;
   padding-inline: 16px;
   border-radius: var(--radius-pill);
 }
