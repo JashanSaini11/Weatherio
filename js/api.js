@@ -7,7 +7,8 @@ const api_key = "9f030a90f49ca95e845cd337222d90ba";
  * @param {Function} callback  callback
  */
 export const fetchData = function (URL, callback) {
-  fetch(`${URL}&appid=${api_key}`)
+  const apiUrl = `${URL}&appid=${api_key}`;
+  fetch(apiUrl)
     .then((res) => res.json())
     .then((data) => callback(data));
 };
@@ -22,11 +23,11 @@ export const url = {
   },
 
   airPollution(lat, lon) {
-    return `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${api_key}`;
+    return `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${api_key}`;
   },
 
   reverseGeo(lat, lon) {
-    return `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${api_key}`;
+    return `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${api_key}`;
   },
 
   /**
