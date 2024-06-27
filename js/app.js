@@ -27,7 +27,11 @@ const addEventOnElements = function (elements, eventType, callback) {
 const searchView = document.querySelector("[data-search-view]");
 const searchToggles = document.querySelectorAll("[data-search-toggler]");
 
-const toggleSearch = () => searchView.classList.toggle("action");
+const toggleSearch = () => {
+  searchView.classList.toggle("action");
+  searchResult.innerHTML = "";
+  searchField.value = "";
+};
 
 addEventOnElements(searchToggles, "click", toggleSearch);
 /**

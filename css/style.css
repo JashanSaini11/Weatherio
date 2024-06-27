@@ -947,13 +947,15 @@ article.container:before {
     height: 56px;
     border-radius: var(--radius-28);
   }
-
   .search-result,
-  .search-view:not(:focus-within).search-result {
+  .search-view:not(:focus-within) .search-result {
     display: none;
   }
-  .search-view:focus-within.search-result.action {
+
+  .search-result.action,
+  .search-view:focus-within .search-result {
     display: block;
+    background-color: rgba(0, 255, 0, 0.5); /* Temporary for debugging */
   }
   .search-view:has(.search-result.action):focus-within(.search-field) {
     border-bottom-left-radius: 0;
