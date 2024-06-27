@@ -1020,14 +1020,7 @@ article.container:before {
     gap: 16px;
   }
 }
-/**News*/
-/**
-*Responsive for large than 1400px screen*/
-@media (min-width: 1400px) {
-  .highlights-list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
