@@ -952,10 +952,10 @@ article.container:before {
   .search-view:not(:focus-within).search-result {
     display: none;
   }
-  .search-view:focus-within.search-result.active {
+  .search-view:focus-within.search-result.action {
     display: block;
   }
-  .search-view:has(.search-result.active):focus-within(.search-field) {
+  .search-view:has(.search-result.action):focus-within(.search-field) {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
